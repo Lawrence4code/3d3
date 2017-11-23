@@ -1,0 +1,103 @@
+html
+  box-sizing: border-box
+
+*
+  box-sizing: inherit
+  &::before, &::after
+    box-sizing: inherit
+
+html
+  width: 100%
+  height: 100%
+  margin: 0
+  padding: 0
+  
+
+body
+  width: 100%
+  height: 100%
+  margin: 0
+  padding: 0
+  background: url('/images/bg.jpg') // /* Background pattern from Pixabay.com */
+  font-family: 'Bangers', cursive
+
+.container
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+h1
+  font-size: 2.6em
+  font-weight: 300
+
+.deck
+  width: 630px
+  min-height: 630px
+  background: linear-gradient(160deg, #b6fdc5 0%, #02ccba 100%)
+  padding: 32px
+  border-radius: 10px
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5)
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  margin: 0 0 15px 0
+  .card
+    height: 125px
+    width: 125px
+    background: #22313F
+    font-size: 0
+    color: #ffffff
+    border-radius: 8px
+    cursor: pointer
+    display: flex
+    justify-content: center
+    align-items: center
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5)
+
+    &.open
+      transition: 0.5s
+      // transform: rotateY(180deg)
+      background: #02b3e4
+      cursor: default
+
+    &.show
+      font-size: 33px
+
+    &.match
+      cursor: default
+      background: #02ccba
+      font-size: 33px
+    
+    &.notmatch
+      background: #C13326
+      font-size: 33px
+    
+    &.gone
+      visibility: hidden
+
+    &.grow
+      transition: all 0.5s ease
+      transform: scale(1.5)
+
+#gameAim
+  margin: 0
+  font-size: 1.1em
+
+.score-panel
+  text-align: left
+  width: 620px
+  font-size: 1.1em
+  .stars
+    margin: 0
+    padding: 0
+    display: inline-block
+    margin: 0 5px 0 0
+    li
+      list-style: none
+      display: inline-block
+  .restart
+    font-size: 1.5em
+    float: right
+    cursor: pointer

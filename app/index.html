@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Matching Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Card Matching Game</h1>
+        </header>
+
+        <div class="score-panel">
+            <ul class="stars">
+                <li>
+                    <i class="fa fa-star"></i>
+                </li>
+                <li>
+                    <i class="fa fa-star"></i>
+                </li>
+                <li>
+                    <i class="fa fa-star"></i>
+                </li>
+            </ul>
+
+            <span class="moves">3</span> Moves
+
+            <!-- <div class="sound"> *** to be added later (in progress)
+                <i id="sound" class="fa fa-volume-up"></i>
+            </div> -->
+
+            <div class="restart">
+                <i class="fa fa-repeat"></i>
+            </div>
+
+        </div>
+
+        <ul class="deck">
+            <li class="card">
+                <i class="fa fa-diamond"></i>
+            </li>
+        </ul>
+        <p id="gameAim"> Match
+            <span class="match"> 16 </span> cards to win!</p>
+        <!-- Sounds credit to http://www.wavsource.com -->
+        <audio id="trumpet" src="resources/sounds/trumpet.wav"> </audio>
+        <audio id="blurp" src="resources/sounds/blurp.wav"> </audio>
+        <audio id="chime" src="resources/sounds/chime.wav"> </audio>
+        <audio id="applause" src="resources/sounds/applause.wav"> </audio>
+        <audio id="gong" src="resources/sounds/gong.wav"> </audio>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
