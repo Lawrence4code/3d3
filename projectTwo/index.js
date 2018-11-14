@@ -1,1 +1,1 @@
-console.log('project index.js initiated.');
+console.log('projectTwo index.js initiated.');
