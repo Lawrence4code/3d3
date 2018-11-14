@@ -1,8 +1,15 @@
 {
-  "name": "3d3",
+  "name": "expense-visualizer",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/Lawrence4code/umemgame.git",
-  "author": "Lawrence <Lawrence4code@gmail.com>",
-  "license": "MIT"
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --out-dir build"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "firebase": "^5.5.7",
+    "parcel-bundler": "^1.10.3"
+  }
 }
