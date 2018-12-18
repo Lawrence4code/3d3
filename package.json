@@ -1,0 +1,20 @@
+{
+  "name": "d3projects",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "d3": "^5.7.0",
+    "d3-legend": "^1.0.0",
+    "d3-svg-legend": "^2.25.6",
+    "d3-tip": "^0.9.1",
+    "firebase": "^5.7.0",
+    "materialize-css": "^1.0.0",
+    "parcel-bundler": "^1.10.3",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  }
+}

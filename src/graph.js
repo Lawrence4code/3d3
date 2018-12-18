@@ -1,4 +1,4 @@
-import database from './firebase';
+import database from './firebase/firebase';
 
 const dimension = { height: 300, width: 300, radius: 150 };
 const center = { x: dimension.width / 2 + 5, y: dimension.height / 2 + 5 };
@@ -39,7 +39,6 @@ const legend = d3
   .legendColor()
   .shape('circle')
   .shapePadding(10)
-
   .scale(color);
 
 // tip setup
@@ -48,7 +47,7 @@ const tip = d3
   .tip()
   .attr('class', 'tip card')
   .html(d => {
-    let content = `<div class="name"> ${d.data.name} </div>`;
+    let content = `<div class="name"> ${d.data.expenseText} </div>`;
     content += `<div class="cost"> ${d.data.cost}</div>`;
     content += `<div class="delete"> Click Slice to delete. </div>`;
     return content;
@@ -61,7 +60,7 @@ graph.call(tip);
 const update = data => {
   // update color scale domain
 
-  color.domain(data.map(d => d.name));
+  color.domain(data.map(d => d.expenseText));
   // join enchanced (pie) data to path elements
   const paths = graph.selectAll('path').data(pie(data));
 
@@ -92,7 +91,7 @@ const update = data => {
     .attr('stroke', '#fff')
     .attr('stroke-width', 3)
     .attr('d', arcPath)
-    .attr('fill', d => color(d.data.name))
+    .attr('fill', d => color(d.data.expenseText))
     .each(function(d) {
       this._current = d;
     })
